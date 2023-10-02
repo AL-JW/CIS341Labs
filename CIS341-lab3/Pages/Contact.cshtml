@@ -1,0 +1,36 @@
+﻿@page
+@model CIS341_lab3.Pages.ContactModel
+@{
+}
+
+<h2>Contact</h2>
+
+<form method="post">
+
+
+    <div class="form-group">
+
+        <label asp-for="FormData.Name">Name:</label>
+        <input asp-for="FormData.Name" class="form-control" required />
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label asp-for="FormData.Email">Email:</label>
+        <input asp-for="FormData.Email" class="form-control" required />
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label asp-for="FormData.Message">Message:</label>
+        <textarea asp-for="FormData.Message" class="form-control" rows="5" required></textarea>
+
+    </div>
+
+    <button type = "submit" class= "btn btn-primary">Send</button>
+
+</form>
