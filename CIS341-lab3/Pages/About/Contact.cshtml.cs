@@ -22,7 +22,7 @@ namespace CIS341_lab3.Pages
             {
                 Console.WriteLine($"Name: {FormData.Name}, Email: {FormData.Email}, Message: {FormData.Message}");
 
-                return RedirectToPage("Index");
+                return RedirectToPage("Thanks");
             }
 
             return Page();

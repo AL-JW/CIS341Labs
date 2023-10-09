@@ -1,0 +1,27 @@
+﻿@page "/Contact/Thanks"
+@model CIS341_lab3.Pages.About.ThanksModel
+@{
+
+    ViewData["Title"] = "Thank you!";
+ 
+    var currentDate = DateTime.Now;
+}
+
+
+
+
+<h1>Thank you!!</h1>
+
+<p> We have recieved your contact info, and you will hear back from us soon.</p>
+
+
+<div class = "text-center">
+    <h1 class="display-4"> Thank you! </h1>
+    
+    <p> Your message was received on @currentDate.</p>
+
+        <p><a href = "@Model.ContactLink">Return to the Contact Form</a></p>
+
+    
+</div>
+

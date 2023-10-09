@@ -35,6 +35,10 @@ namespace CIS341_lab3
                 await next.Invoke();
             });
 
+         
+
+            app.UseStatusCodePagesWithReExecute("/StatusCode", "?code={0}");
+
 
             app.UseRouting();
 
