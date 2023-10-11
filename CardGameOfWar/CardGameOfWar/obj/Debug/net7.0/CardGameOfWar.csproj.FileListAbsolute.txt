@@ -1,0 +1,15 @@
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\bin\Debug\net7.0\CardGameOfWar.exe
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\bin\Debug\net7.0\CardGameOfWar.deps.json
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\bin\Debug\net7.0\CardGameOfWar.runtimeconfig.json
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\bin\Debug\net7.0\CardGameOfWar.dll
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\bin\Debug\net7.0\CardGameOfWar.pdb
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\obj\Debug\net7.0\CardGameOfWar.csproj.AssemblyReference.cache
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\obj\Debug\net7.0\CardGameOfWar.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\obj\Debug\net7.0\CardGameOfWar.AssemblyInfoInputs.cache
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\obj\Debug\net7.0\CardGameOfWar.AssemblyInfo.cs
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\obj\Debug\net7.0\CardGameOfWar.csproj.CoreCompileInputs.cache
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\obj\Debug\net7.0\CardGameOfWar.dll
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\obj\Debug\net7.0\refint\CardGameOfWar.dll
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\obj\Debug\net7.0\CardGameOfWar.pdb
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\obj\Debug\net7.0\CardGameOfWar.genruntimeconfig.cache
+D:\CodingProjects2023C#\CardGameOfWar\CardGameOfWar\obj\Debug\net7.0\ref\CardGameOfWar.dll
