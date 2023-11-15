@@ -1,0 +1,24 @@
+﻿@model WorkoutTrackingApp.Models.Workout
+
+@{
+
+    ViewData["Title"] = "Edit Workout";
+
+}
+
+
+<h1>Edit Workout</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="WorkoutId" />
+
+    <div class="form-group">
+        <label asp-for="Name">Workout Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <!-- Add other form fields for editing workout details -->
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
