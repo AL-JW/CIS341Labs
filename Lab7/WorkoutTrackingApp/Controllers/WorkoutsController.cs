@@ -47,9 +47,9 @@ namespace WorkoutTrackingApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(int WorkoutId)
+        public IActionResult Edit(int id)
         {
-            var workout = _context.Workouts.FirstOrDefault(w => w.WorkoutId == WorkoutId);
+            var workout = _context.Workouts.First(w => w.WorkoutId == id);
 
             if (workout == null)
             {

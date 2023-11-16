@@ -20,7 +20,7 @@ namespace WorkoutTrackingApp.Data
             //Seed in and create entity instances
             var account = new Account
             {
-                AccountId = 1,
+                //AccountId = 1,
                 Email = "JohnRingo@gmail.com",
                 Password = "password",
                 Role = "User"
@@ -29,15 +29,21 @@ namespace WorkoutTrackingApp.Data
             // Add to Dbset
             context.Accounts.Add(account);
 
+            context.SaveChanges();
+
+           
+
             var workout = new Workout
             {
-                WorkoutId = 1,
-                AccountId = 1,
+               //WorkoutId = 1,
+                //AccountId = 1,
                 Name = "Cycling",
                 Author = "Larry Trainer",
             };
 
             context.Workouts.Add(workout);
+
+            context.SaveChanges();
 
 
             var exercise = new Exercise
@@ -50,6 +56,7 @@ namespace WorkoutTrackingApp.Data
             };
 
             context.Exercises.Add(exercise);
+            context.SaveChanges();
 
             var message = new Message
             {
@@ -59,24 +66,26 @@ namespace WorkoutTrackingApp.Data
             };
 
             context.Messages.Add(message);
+            context.SaveChanges();
 
 
-                var trackedWorkout = new TrackedWorkout
+            var trackedWorkout = new TrackedWorkout
                 {
-                    TrackedWorkoutId = 1,
-                    AccountId = 1,
-                    WorkoutId = 1,
+                    //TrackedWorkoutId = 1,
+                   // AccountId = 1,
+                   // WorkoutId = 1,
                     DateCompleted = DateTime.Now
                 };
 
             context.TrackedWorkouts.Add(trackedWorkout);
+            context.SaveChanges();
 
 
             var workoutexercise = new WorkoutExercise
             {
 
-                WorkoutId = 1,
-                ExerciseId = 1,
+               // WorkoutId = 1,
+               // ExerciseId = 1,
 
             };
             context.WorkoutExercises.Add(workoutexercise);

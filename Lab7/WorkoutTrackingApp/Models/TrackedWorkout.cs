@@ -8,14 +8,14 @@ namespace WorkoutTrackingApp.Models
         [Key]
         public int TrackedWorkoutId { get; set; } //The primary key for tracked workouts
 
-        public int AccountId { get; set; }
+        //public int AccountId { get; set; }
 
         //Foreign key property
-        [ForeignKey("AccountId")]
+       // [ForeignKey("AccountId")]
         //public Account Account { get; set; }
 
         //The navigation property needed with the foreign key
-        public virtual Account Account { get; set; }
+       // public virtual Account Account { get; set; }
 
         [Required]
         public int WorkoutId { get; set; }

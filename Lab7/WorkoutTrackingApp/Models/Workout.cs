@@ -5,14 +5,17 @@ namespace WorkoutTrackingApp.Models
 {
     public class Workout
     {
+
+       // public int AccountId { get; set; }
+
+        //Navigation property
+       // [ForeignKey("AccountId")]
+       // public virtual Account Account { get; set; }
+
         [Key]
         public int WorkoutId { get; set; } //Primary key
 
-        public int AccountId { get; set; }
-        [ForeignKey("AccountId")]
-
-        //Navigation property
-        public virtual Account Account { get; set; }
+        
 
         [Required]
         [Display(Name = "Workout Name")]

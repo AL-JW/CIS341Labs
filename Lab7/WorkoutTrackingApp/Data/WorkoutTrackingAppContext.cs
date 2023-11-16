@@ -18,8 +18,5 @@ namespace WorkoutTrackingApp.Data
 
         }
 
-        
-
-
     }
 }
