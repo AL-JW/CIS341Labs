@@ -1,0 +1,44 @@
+﻿@model WorkoutTrackingApp.Models.Workout
+@{
+    ViewData["Title"] = "Create Workout";
+    
+}
+
+<h1>Create a new Workout</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Name">Workout Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+
+        <label asp-for="Author">Author</label>
+        <input asp-for="Author" class="form-control" />
+        <span asp-validation-for="Author" class="text-danger"></span>
+
+
+       @* <label asp-for="ExerciseIds">Select Exercises</label>
+        <select asp-for="ExerciseIds" asp-items="ViewBag.ExerciseList" multiple class="form-control"></select>
+        <span asp-validation-for="ExerciseIds" class="text-danger"></span>*@
+
+        <label>Select Exercises</label>
+        @foreach (var exercise in ViewBag.ExerciseList)
+        {
+            <div class="form-check">
+                <input type="checkbox" name="SelectedExercises" value="@exercise.ExerciseId" class="form-check-input" />
+                <label class="form-check-label">@exercise.Name</label>
+            </div>
+        }
+        
+
+
+       <!-- <input type="hidden" asp-for="WorkoutId" value="2" /> -->
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
