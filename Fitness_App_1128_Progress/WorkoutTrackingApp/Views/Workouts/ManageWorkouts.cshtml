@@ -1,0 +1,55 @@
+﻿@model WorkoutTrackingApp.Models.Workout
+@{
+    bool isEditMode = Model != null && Model.WorkoutId > 0;
+    ViewData["Title"] = isEditMode ? "Edit Workout" : "Create Workout";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="@((isEditMode) ? "Edit" : "Create")" method="post">
+    @if (isEditMode)
+    {
+            <input type="hidden" asp-for="WorkoutId" />
+    }
+
+    <div class="form-group">
+        <label asp-for="Name">Workout Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+
+        @if (!isEditMode)
+        {
+                <label asp-for="Author">Author</label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+        }
+
+       
+
+
+        @if (ViewBag.ExerciseList != null)
+        {
+            <label>Select Exercises</label>
+            @foreach (var exercise in ViewBag.ExerciseList)
+            {
+                <div class="form-check">
+                    <input type="checkbox" name="SelectedExercises" value="@exercise.ExerciseId" class="form-check-input"
+                    @(Model.Exercises != null && Model.Exercises.Any(e => e.ExerciseId == exercise.ExerciseId) ? "checked" : "") />
+                    <label class="form-check-label">@exercise.Name</label>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No exercises available to select.</p>
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">@((isEditMode) ? "Save Changes" : "Create")</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
