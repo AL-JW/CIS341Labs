@@ -1,0 +1,22 @@
+﻿@model List<WorkoutTrackingApp.Models.Workout>
+@*
+    // Workouts listed here for guests and everyone visiting the app to view 
+    Also the details of the workouts as well maybe?
+    Also will try to add the delete action method funcionality to the index here so a user can click delete when viewing the list of workouts
+    Actually no, users should only be able to delete workouts that they created or edited, not ones that are build in and uploaded by trainers
+
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    
+*@
+@{
+}
+
+@foreach (var workout in Model)
+{
+    <div>
+        <p>@workout.Name</p>
+        <p>@workout.Author</p>
+        <!-- Other workout details, if I want to add any more, like maybe a description? -->
+        <a asp-action="Edit" asp-route-id="@workout.WorkoutId" class="btn btn-secondary">Edit</a>
+    </div>
+}
