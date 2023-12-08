@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    Also, can incorporate details as well as functionality to delete an exercise here as well.  Overall this is hopefully going to display all the exercises
+    and allow you to delete them too with like an X button 
+*@
+@{
+}
+
+@model List<WorkoutTrackingApp.ViewModels.ExerciseViewModel>
+
+@*@foreach (var exercise in Model)
+{
+    <div>
+        <h3>@exercise.Name</h3>
+        <p>@exercise.Description</p>
+        <!-- Display other details as needed -->
+    </div>
+}
+*@
+
+@foreach (var exercise in Model)
+{
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">@exercise.Name</h5>
+            <p class="card-text">@exercise.Description</p>
+            <!-- Display other details as needed -->
+            @* Assuming you have logic to determine if a user can edit/delete *@
+            @if (User.IsInRole("Trainer")) // or whatever your logic is for showing edit/delete
+            {
+                <a asp-action="Edit" asp-route-id="@exercise.Id" class="btn btn-primary">Edit</a>
+                <a asp-action="Delete" asp-route-id="@exercise.Id" class="btn btn-danger">Delete</a>
+            }
+        </div>
+    </div>
+}
