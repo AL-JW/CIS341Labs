@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    Could possibly include the popular workouts in this view
+    // Deleted Profile.cshtml because I figure this will be the profile
+*@
+@{
+    <h1>This will be the TrainerDashboardPage</h1>
+
+    <a class="btn btn-primary" asp-controller="Workouts" asp-action="Create">Create New Workout</a>
+    <br>
+    <br>
+    <a class="btn btn-primary" asp-controller="Exercises" asp-action="Create">Create New Exercise</a>
+
+    <br>
+    <br>
+
+    <a class="btn btn-primary" asp-controller="Workouts" asp-action="Index">Manage Existing Workouts</a>
+
+    <br>
+    <br>
+
+    <a class="btn btn-primary" asp-controller="Exercises" asp-action="Index">Manage Existing Exercises</a>
+
+    <br>
+    <br>
+
+    <div class="messaging-links">
+        <a href="@Url.Action("SendMessage", "TrainerProfileDashboard")" class="btn btn-primary">Message a Subscriber</a>
+        <a href="@Url.Action("ViewMessages", "TrainerProfileDashboard")" class="btn btn-secondary">View Messages</a>
+    </div>
+
+}
