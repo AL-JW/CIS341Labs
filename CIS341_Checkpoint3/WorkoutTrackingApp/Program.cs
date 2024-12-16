@@ -53,14 +53,29 @@ namespace WorkoutTrackingApp
                 var services = scope.ServiceProvider;
                 try
                 {
+                    //These next lines to 63 are the original that work. 
+                    //// Get the DbContext from the service provider
+                    //var context = services.GetRequiredService<WorkoutTrackingAppContext>();
+
+                    //var userManager = services.GetRequiredService<UserManager<IdentityUser>>();
+                    //var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+
+                    //DbInitializer.InitializeAsync(context, userManager, roleManager).GetAwaiter().GetResult();
+
+                    //Here trying to get the contexts to update on startup. down to line 78.
+
                     // Get the DbContext from the service provider
-                    var context = services.GetRequiredService<WorkoutTrackingAppContext>();
+                    var workoutContext = services.GetRequiredService<WorkoutTrackingAppContext>();
+                    var altercationContext = services.GetRequiredService<AltercationContext>();
+
+                    // Apply migrations for both contexts
+                    workoutContext.Database.Migrate();
+                    altercationContext.Database.Migrate();
 
                     var userManager = services.GetRequiredService<UserManager<IdentityUser>>();
                     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
-             
-                    DbInitializer.InitializeAsync(context, userManager, roleManager).GetAwaiter().GetResult();
 
+                    DbInitializer.InitializeAsync(workoutContext, userManager, roleManager).GetAwaiter().GetResult();
                 }
                 catch (Exception ex)
                 {
